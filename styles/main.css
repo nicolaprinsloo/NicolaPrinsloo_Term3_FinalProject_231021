@@ -1,1 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ---------------------------------------- */
+/* Global Styles */
+
+/* Fonts */
+/* font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+
+h1,h2{
+    font-family: 'Roboto', sans-serif;
+}
+
+h3{
+    font-family: 'Pacifico', cursive;
+}
+
+h4,h5,h6,p {
+    font-family: 'Roboto Condensed', sans-serif;
+    /* font-size: 16px; */
+}
+
+/* Spacing */
+.full-height {
+    height: 100vh;
+}
+
+/* ---------------------------------------- */
+/* Components */
