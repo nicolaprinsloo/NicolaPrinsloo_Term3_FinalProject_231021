@@ -28,3 +28,25 @@ h4,h5,h6,p {
 
 /* ---------------------------------------- */
 /* Components */
+
+
+/* ---------------------------------------- */
+/* Bootstrap Component Overrides */
+
+/* Navigation */
+.navbar{
+    background-color: #52CBCC;
+}
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.941);
+}
+
+.nav-link:hover {
+    color: #F64396;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #F64396;
+    color: #F64396;
+}
