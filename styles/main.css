@@ -37,6 +37,7 @@ h4,h5,h6,p {
     color: #F64396;
     text-align: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /* ---------------------------------------- */
@@ -76,7 +77,8 @@ h4,h5,h6,p {
 /* ---------------------------------------- */
 /* Footer */
 footer{
-    margin-top: 5%;
+    width: 1128px;
+    margin-top: 100px;
     padding-top: 20px;
     background-color: #52CBCC;
     color: white;
@@ -84,17 +86,56 @@ footer{
 
 
 
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* HOME PAGE*/
+
+
+
 
 /* Carousel */
+
+.carousel{
+    margin-top: 75px;
+}
+
+.img{
+    height: 700px;
+    width: 100%;
+}
+
+.orange{
+    width: 100%;
+    height: 700px;
+    background-color: #F1A03C;
+    padding-top: 200px;
+}
+
+.pink{
+    width: 100%;
+    height: 700px;
+    background-color: #F64396;
+    
+}
+
+.blue{
+    width: 400px;
+    height: 400px;
+    background-color: #52CBCC;
+    margin-left: 50%;
+    padding-top: 100px;
+}
 
 
 /* ---------------------------------------- */
 /* FAQ*/
 
+.FAQ{
+    margin: 0 auto;
+}
+
 .faqs{
     color: #52CBCC;
     font-style: italic;
-    margin-top: 5%;
 }
 
 .further{
@@ -220,3 +261,65 @@ header{
 /* ---------------------------------------- */
 /* Extra */
 
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* TRIPS PAGE*/
+
+
+.block2{
+    width: 100%;
+    height: 30vh;
+    background-color: #F1A03C;
+    border-radius: 50px;
+    margin-bottom: 15px;
+
+}
+
+.tagline2{
+    color: #F64396;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.trips{
+    color: #F1A03C;
+    font-style: italic;
+    margin-top: 5%;
+    margin-left: 115px;
+}
+
+.trip{
+    
+}
+
+.title{
+    padding-top: 5%;
+    color: #F3FFFF;
+    font-size: smaller;
+}
+
+.info{
+    padding-top: 5%;
+    color: #F3FFFF;
+}
+
+.button3 {
+    border: none;
+    height: 40px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #F3FFFF;
+    color: #F1A03C;
+    margin-bottom: 5px;
+    
+}
+
+.button4 {
+    border: none;
+    height: 30px;
+    /* padding: 10px 15px; */
+    border-radius: 5px;
+    background: #F3FFFF;
+    color: #F1A03C;
+    margin-bottom: 5px;;
+}
