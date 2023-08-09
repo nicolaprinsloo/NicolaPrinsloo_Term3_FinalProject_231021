@@ -45,6 +45,7 @@ h4,h5,h6,p {
 }
 
 
+
 /* -------------------------------------------------------------------------------------- */
 /* Bootstrap Component Overrides */
 
@@ -137,33 +138,162 @@ header{
     margin-top: 75px;
 }
 
-.img{
+/* .img1{
     height: 700px;
     width: 100%;
+} */
+
+/* Slide 1 */
+.slide1{}
+
+.img1{
+    height: 500px;
+    width: 600px;
+    margin-top: -700px;
+    margin-left: -400px;
 }
 
-.orange{
-    width: 100%;
+.purple1{
+    width: 110%;
     height: 700px;
-    background-color: #F1A03C;
+    background-color: #9747FF;
     padding-top: 200px;
 }
 
-.pink{
-    width: 100%;
+.orange1{
+    width: 400px;
+    height: 400px;;
+    background-color: #F1A03C;
+    margin-top: -550px;
+    margin-left: 200px;
+}
+
+.cta1{
+    margin-top: -700px;
+    margin-left: 440px;
+}
+
+.intro1{
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.button2 {
+    border: none;
+    height: 50px;
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #F3FFFF;
+    color: #F1A03C;
+    margin-left: 700px;
+}
+
+/* Slide 2 */
+.slide2{}
+
+.pink1{
+    width: 105%;
     height: 700px;
     background-color: #F64396;
     
 }
 
-.blue{
-    width: 400px;
-    height: 400px;
-    background-color: #52CBCC;
-    margin-left: 50%;
-    padding-top: 100px;
+.orange2{
+    width: 105%;
+    height: 700px;
+    background-color: #F1A03C;
 }
 
+.purple2{
+    width: 200px;
+    height: 700px;
+    background-color: #9747FF;
+    margin-top: -700px;
+    /* margin-left: 50%; */
+}
+
+.blue1{
+    width: 400px;
+    height: 700px;
+    background-color: #52CBCC;
+    margin-top: -700px;
+    margin-left: 50%;
+}
+
+.cta2{
+    margin-top: -500px;
+    margin-right: 800px;
+}
+
+.intro2{
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.button3 {
+    border: none;
+    height: 50px;
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #F3FFFF;
+    color: #F1A03C;
+    margin-left: 700px;
+}
+
+/* Slide 3 */
+.slide3{}
+
+.pink3{
+    width: 110%;
+    height: 700px;
+    background-color: #F64396;
+    padding-top: 200px;
+}
+
+.orange3{
+    width: 300px;
+    height: 500px;;
+    background-color: #F1A03C;
+    margin-top: -500px;
+    margin-left: 200px;
+}
+
+.img2{
+    height: 400px;
+    width: 400px;
+    margin-top: -900px;
+    margin-left: 200px;
+}
+
+.cta3{
+    margin-top: -600px;
+    margin-left: -300px;
+}
+
+.intro3{
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.button4{
+    border: none;
+    height: 50px;
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #F3FFFF;
+    color: #F1A03C;
+    margin-left: 700px;
+}
+
+
+
+/* Tagline */
 .tagline1{
     color: #F64396;
     text-align: center;
@@ -305,7 +435,7 @@ form{
     color: #F3FFFF;
 }
 
-.button3 {
+/* .button3 {
     border: none;
     height: 40px;
     padding: 10px 15px;
@@ -324,4 +454,4 @@ form{
     background: #F3FFFF;
     color: #F1A03C;
     margin-bottom: 5px;;
-}
+} */
