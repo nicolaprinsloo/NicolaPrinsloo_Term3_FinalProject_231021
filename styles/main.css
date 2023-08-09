@@ -397,6 +397,36 @@ form{
 /* ---------------------------------------------------------------------------------------------------------------- */
 /* TRIPS PAGE*/
 
+
+
+/* Card */
+.card{
+    border-radius: 150px 150px 12px 12px;
+    background: #F3F3F3;
+    text-align: center;
+    height: 440px;
+    border: none;
+}
+
+.card-img-top{
+    width: auto;
+    height: 320px;
+    margin: auto;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1); 
+}
+
+.card-img-top.small{
+    height:200px;
+}
+
+.card-text{
+    color: #18382B;
+}
+
+
+/*  */
+
+
 .tagline2{
     color: #F64396;
     text-align: center;
