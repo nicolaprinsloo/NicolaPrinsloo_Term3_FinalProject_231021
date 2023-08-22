@@ -10,6 +10,7 @@ const arrTrips = [
       "image": "Logo.svg",
       "tripLength": "short",
       "tripEdition": "kids",
+      "origin":"Malibu",
     },
     {
       "name": "BarbieIsland",
@@ -18,6 +19,7 @@ const arrTrips = [
       "image": "Logo.svg",
       "tripLength": "long",
       "tripEdition": "adults",
+      "origin":"Malibu",
     },
     {
       "name": "California",
@@ -26,14 +28,16 @@ const arrTrips = [
       "image": "Logo.svg",
       "tripLength": "short",
       "tripEdition": "limited",
+      "origin":"California",
     },
     {
-      "name": "LA",
+      "name": "Los Angeles",
       "price": 3999,
       "description": "Sail along stunning LA coast, bask in sunsets, and explore azure waters on a captivating boat cruise.",
       "image": "Logo.svg",
       "tripLength": "short",
       "tripEdition": "kids",
+      "origin":"Los Angeles",
     },
     {
       "name": "Hawaii",
@@ -42,6 +46,7 @@ const arrTrips = [
       "image": "Logo.svg",
       "tripLength": "long",
       "tripEdition": "adults",
+      "origin":"Hawaii",
     },
     {
       "name": "Caribbean",
@@ -50,6 +55,7 @@ const arrTrips = [
       "image": "Logo.svg",
       "tripLength": "short",
       "tripEdition": "limited",
+      "origin":"Caribbean",
     },
 ];
 
@@ -79,6 +85,16 @@ function loadTrips(tripsToShow) {
 
   console.log(tripsToShow);
 
+  $.ajax({
+    type:"GET",
+    URL:"https://api.openweathermap.org/data/2.5/weather?q=" + plant.origin + "&appid=6afff1b645e0f71655c4713f2f1c870c",
+    success:function(data){
+      temp = data
+      console.log(temp);
+    }
+  }).done(function(){
+    $(currentChild).find("#weatherTemp").text("OriginTemp: " + Math.round(temp.main.temp - 273));
+  });
 
   // Clear all elements in container
   $("#tripsContainer").empty();
@@ -104,6 +120,7 @@ function loadTrips(tripsToShow) {
 
     // 4: Hide the description text from the plant card
     $(currentChild).find("#descriptionText").hide();
+    $(currentChild).find("#weatherTemp").hide();
 
   }
 }
@@ -148,8 +165,23 @@ $("#tripsContainer").on('click', '.card', function(){
   // Toggle the price & description text
   $(this).find("#priceText").toggle();
   $(this).find("#descriptionText").toggle();
+  $(this).find("#weatherTemp").toggle();
 
   // Resize the image to fit the additional content
   $(this).find(".card-img-top").toggleClass("small");
 
 });
+
+//Weather API 
+
+// $(document).ready(function() {
+//   $.ajax({
+//     type:"GET",
+//     URL:"https://api.openweathermap.org/data/2.5/weather?q=Pretoria&appid=6afff1b645e0f71655c4713f2f1c870c",
+//     success:function(data){
+//       console.log(data);
+//     }
+//   }).done.(function(){
+//     ("#weatherTemp").text(data.main.temp);
+//   });
+// })
