@@ -130,7 +130,7 @@ function filterSortTrips() {
 
   let filteredSortedArrTrips = [];
 
-  //Filter Plants
+  //Filter trips
   filteredSortedArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
   
   loadTrips(filteredSortedArrTrips);
@@ -140,15 +140,14 @@ function filterSortTrips() {
 }
 
 // ----------------------------------------------------------------
-// When the plant card is clicked
+// When the trips card is clicked
 // ----------------------------------------------------------------
 
-$("#plantsContainer").on('click', '.card', function(){
+$("#tripsContainer").on('click', '.card', function(){
 
   // Toggle the price & description text
   $(this).find("#priceText").toggle();
   $(this).find("#descriptionText").toggle();
-  $(this).find("#weatherTemp").toggle();
 
   // Resize the image to fit the additional content
   $(this).find(".card-img-top").toggleClass("small");
