@@ -28,3 +28,50 @@ const arrTrips = [
 ];
 
 console.log(arrTrips);
+
+// ----------------------------------------------------------------
+// When a filter or sort is clicked
+// ----------------------------------------------------------------
+
+$("input[name='filterRadio']").click(function() {
+  appliedFilter = $(this).attr('value');
+
+  console.log(appliedFilter);
+  filterSortTrips();
+});
+
+$("input[name='sortRadio']").click(function() {
+  appliedSort = $(this).attr('value');
+
+  console.log(appliedSort);
+  filterSortTrips();
+});
+
+function filterSortTrips() {
+
+  let filteredSortedArrTrips = [];
+
+  //Filter Plants
+  filteredSortedArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
+  
+  loadTrips(filteredSortedArrTrips);
+
+  
+
+}
+
+// ----------------------------------------------------------------
+// When the plant card is clicked
+// ----------------------------------------------------------------
+
+$("#plantsContainer").on('click', '.card', function(){
+
+  // Toggle the price & description text
+  $(this).find("#priceText").toggle();
+  $(this).find("#descriptionText").toggle();
+  $(this).find("#weatherTemp").toggle();
+
+  // Resize the image to fit the additional content
+  $(this).find(".card-img-top").toggleClass("small");
+
+});
