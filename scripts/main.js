@@ -53,7 +53,60 @@ const arrTrips = [
     },
 ];
 
+let appliedFilter = "";
+let appliedSort = "";
+
 console.log(arrTrips);
+
+$(document).ready(function(){
+
+  console.log("Hello");
+
+  // -----------------------------------------
+  // Trips Page
+
+  loadTrips(arrTrips);
+
+}); 
+
+// ----------------------------------------------------------------
+// Load all Trips
+// ----------------------------------------------------------------
+
+function loadTrips(tripsToShow) {
+
+  // Load and display all the trips
+
+  console.log(tripsToShow);
+
+
+  // Clear all elements in container
+  $("#tripsContainer").empty();
+
+  // Loop through plants
+
+  for (let i = 0; i < tripsToShow.length; i++) {
+    const trip = tripsToShow[i];
+    
+    console.log(trip);
+
+    // 1: Select plants container and add the current array plant to it
+    $("#tripsContainer").append($("#tripCardTemplate").html());
+
+    // 2: Create a variable that contains the most recently added plant card
+    let currentChild = $("#tripsContainer").children().eq(i);
+
+    // 3: Set the content for the plant card from the plants list
+    $(currentChild).find(".card-img-top").attr('src','assets/Logo.svg' + trip.image);
+    $(currentChild).find("#nameText").text(trip.name);
+    $(currentChild).find("#priceText").text('R' + trip.price);
+    $(currentChild).find("#descriptionText").text(trip.description);
+
+    // 4: Hide the description text from the plant card
+    $(currentChild).find("#descriptionText").hide();
+
+  }
+}
 
 // ----------------------------------------------------------------
 // When a filter or sort is clicked
