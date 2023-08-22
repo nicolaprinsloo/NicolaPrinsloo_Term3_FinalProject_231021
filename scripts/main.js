@@ -71,7 +71,7 @@ $(document).ready(function(){
   // -----------------------------------------
   // Trips Page
 
-  loadTrips(arrTrips);
+  // loadTrips(arrTrips);
 
 }); 
 
@@ -83,11 +83,13 @@ function loadTrips(tripsToShow) {
 
   // Load and display all the trips
 
+  console.log(loadTrips);
   console.log(tripsToShow);
+  
 
   $.ajax({
     type:"GET",
-    URL:"https://api.openweathermap.org/data/2.5/weather?q=" + plant.origin + "&appid=6afff1b645e0f71655c4713f2f1c870c",
+    URL:"https://api.openweathermap.org/data/2.5/weather?q=" + trips.origin + "&appid=6afff1b645e0f71655c4713f2f1c870c",
     success:function(data){
       temp = data
       console.log(temp);
@@ -99,26 +101,26 @@ function loadTrips(tripsToShow) {
   // Clear all elements in container
   $("#tripsContainer").empty();
 
-  // Loop through plants
+  // Loop through Trips
 
   for (let i = 0; i < tripsToShow.length; i++) {
     const trip = tripsToShow[i];
     
     console.log(trip);
 
-    // 1: Select plants container and add the current array plant to it
+    // 1: Select trips container and add the current array trips to it
     $("#tripsContainer").append($("#tripCardTemplate").html());
 
-    // 2: Create a variable that contains the most recently added plant card
+    // 2: Create a variable that contains the most recently added trip card
     let currentChild = $("#tripsContainer").children().eq(i);
 
-    // 3: Set the content for the plant card from the plants list
+    // 3: Set the content for the trip card from the trip list
     $(currentChild).find(".card-img-top").attr('src','assets/Logo.svg' + trip.image);
     $(currentChild).find("#nameText").text(trip.name);
     $(currentChild).find("#priceText").text('R' + trip.price);
     $(currentChild).find("#descriptionText").text(trip.description);
 
-    // 4: Hide the description text from the plant card
+    // 4: Hide the description text from the trip card
     $(currentChild).find("#descriptionText").hide();
     $(currentChild).find("#weatherTemp").hide();
 
