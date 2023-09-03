@@ -81,6 +81,35 @@ $(document).ready(function(){
 
 }); 
 
+// ----------------------------------------------------------------
+// Weather API
+// ----------------------------------------------------------------
+
+$(document).ready(function() {
+
+  const city = "Pretoria"; 
+  const apiKey = "6afff1b645e0f71655c4713f2f1c870c";
+
+  $.ajax({
+    type: "GET",
+    url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`,
+    success: function(data) {
+      const temp = data.main.temp;
+      console.log("Temperature:", temp);
+      
+      updateTemperature(Math.round(temp - 273));
+    }
+  });
+});
+
+function updateTemperature(temp) {
+
+  const templateContents = $("#weatherApi").contents().clone();
+  const tempElement = templateContents.find("#temp");
+  tempElement.text("Temperature: " + temp + "°C");
+
+  $(".weather").empty().append(templateContents);
+}
 
 
 // ----------------------------------------------------------------

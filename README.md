@@ -17,6 +17,7 @@ This is my term 3 project in Interactive Development as a First Year student, wh
 * [Authors](#authors)
 * [License](#license)
 * [Acknowledgements](#acknowledgements)
+* [Plagiarism Declaration](#plagiarism-declaration)
 
 ## About The Project
 
@@ -24,7 +25,7 @@ Barbie Cruises allows users to browse and filter different cruise trips to find 
 
 ### Home
 
-![BarbieCruisesHomePgae](/assets/Home%20Page%20Mockup.png)
+![BarbieCruisesHomePage](/assets/ReadMe%20Home%20Page%20Mockup.png)
 
 ### Browse Plants
 
@@ -80,4 +81,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * [Pinterest Inspiration](https://github.com/paulowi/DV100-T3-Class-Project-Test/graphs/contributors)
 * Text Content via Chat GPT
 
- 
+ ## Plagiarism Declaration
+
+ ![PlagiarismDeclaration](/assets/ReadMe_Plagiarism%20Declaration_NicolaPrinsloo.png)

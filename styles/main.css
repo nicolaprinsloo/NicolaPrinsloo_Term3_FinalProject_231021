@@ -29,10 +29,6 @@ h4,h5,h6,p {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* Spacing */
-/* .full-height {
-    height: 100vh;
-} */
 
 /* ---------------------------------------- */
 /* Components */
@@ -61,6 +57,12 @@ h4,h5,h6,p {
 .navbar{
     position: fixed;
     background-color: #52CBCC;
+}
+
+.navLogo:hover{
+    cursor: pointer;
+    height: 50px;
+    background-image: url('../assets/Barbie\ LogoHover.png');
 }
 
 .name{
@@ -148,13 +150,9 @@ header{
 /* Carousel */
 
 .carousel{
-    margin-top: 75px;
+    margin-top: 60px;
 }
 
-/* .img1{
-    height: 700px;
-    width: 100%;
-} */
 
 /* Slide 1 */
 .slide1{}
@@ -163,7 +161,7 @@ header{
     height: 500px;
     width: 600px;
     margin-top: -700px;
-    margin-left: -400px;
+    margin-left: -450px;
 }
 
 .purple1{
@@ -196,6 +194,7 @@ header{
     border: none;
     height: 50px;
     width: 150px;
+    margin-top: 30px;
     padding: 10px 15px;
     border-radius: 10px;
     background: #F3FFFF;
@@ -248,13 +247,14 @@ header{
 .intro2{
     color: white;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .button3 {
     border: none;
     height: 50px;
     width: 150px;
+    margin-top: 30px;
     padding: 10px 15px;
     border-radius: 10px;
     background: #F3FFFF;
@@ -263,7 +263,8 @@ header{
 }
 .button3:hover{
     cursor: pointer;
-    background: #F1A03C;
+    background: #9747FF;
+    
     color: #F3FFFF;
 }
 
@@ -299,14 +300,16 @@ header{
 
 .intro3{
     color: white;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 200px;
+    margin-left: 550px;
 }
 
 .button4{
     border: none;
     height: 50px;
-    width: 150px;
+    width: 200px;
+    margin-top: 30px;
     padding: 10px 15px;
     border-radius: 10px;
     background: #F3FFFF;
@@ -328,6 +331,43 @@ header{
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+
+/* ---------------------------------------- */
+/* WEATHER*/
+
+.weatherLine{
+    color: #F1A03C;
+    font-style: italic;
+    margin-top: 5%;
+}
+
+.weather{
+    color:#F3FFFF;
+    font-size: 40px;
+    padding-top: 70px;
+    padding-left: 200px;
+}
+
+.block{
+    width: 80%;
+    height: 30vh;
+    background-color: #F1A03C;
+    border-radius: 50px;
+    
+}
+
+.weatherIcon{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.weatherInfo{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
 
 
 /* ---------------------------------------- */
@@ -398,24 +438,6 @@ form{
     border-width: 2px;
     background-color: #F3FFFF;
     color: #015656;
-}
-
-
-
-/* Weather */
-
-.weather{
-    color: #F1A03C;
-    font-style: italic;
-    margin-top: 5%;
-}
-
-.block{
-    width: 80%;
-    height: 40vh;
-    background-color: #F1A03C;
-    border-radius: 50px;
-    
 }
 
 

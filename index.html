@@ -18,11 +18,11 @@
         <div class="container">
           
           <!-- Logo -->
-          <a class="navbar-brand" href="#">
-            <img src="assets/BarbieCruisesLogo.svg" alt="Logo" height="50">
+          <a class="navLogo" href="https://github.com/nicolaprinsloo">
+            <img src="assets/BarbieCruisesLogoHover.png" alt="Logo" height="50">
           </a>
 
-          <div class="name" href="">
+          <div class="name">
             <h3>Barbie Dream Boat Cruises</h3>
           </div>
   
@@ -35,7 +35,7 @@
               <a class="nav-link" href="/pages/trips.html">Trips</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/checkout.html">Ticket Purchase</a>
+              <a class="nav-link" href="/pages/checkout.html">Your Purchases</a>
             </li>
           </ul>
   
@@ -74,9 +74,9 @@
             </div>
 
             <div class="cta1">
-              <h3 class="intro1">Come Book Your Cool Cruise!</h3>
+              <h1 class="intro1">Welcome to <br> Barbie Dream Boat Cruises!</h1>
               <button class="button2">
-                  <strong><h4>BOOK NOW</h4></strong>
+                  <strong><h4>SEE TRIPS</h4></strong>
               </button>
             </div>
 
@@ -98,7 +98,7 @@
             </div>
 
             <div class="cta2">
-              <h3 class="intro2">Come Book Your Cool Cruise!</h3>
+              <h1 class="intro2">Book your cruise filled with an enchanting <br> blend of adventure, glamour, and imagination now!</h1>
               <button class="button3">
                   <strong><h4>BOOK NOW</h4></strong>
               </button>
@@ -123,9 +123,9 @@
             </div>
 
             <div class="cta3">
-              <h3 class="intro3">Come Book Your Cool Cruise!</h3>
+              <h1 class="intro3">Come Book Your Cool Cruise!</h1>
               <button class="button4">
-                  <strong><h4>BOOK NOW</h4></strong>
+                  <strong><h4>LOOK AT TRIPS</h4></strong>
               </button>
             </div>
             
@@ -167,7 +167,7 @@
     <!-- Weather -->
     <div class="container">
       <div class="row">
-        <div class="weather">
+        <div class="weatherLine">
           <h4>Check the Weather before you come aboard</h4>
         </div>
       </div>
@@ -176,8 +176,28 @@
     <div class="container">
       <div class="row">
         <div class="col block">
-          <p class="card-text mt-4" id="weatherTemp">Weather in Malibu Today is 35'C</p>
-          <p></p>
+
+        <div class="row">
+          <div class="col-4">
+            <img class="weatherIcon" src="assets/weather_icon.png" height="200px">
+          </div>
+
+          <div class="col-3 weatherInfo">
+            <h4>Pretoria</h4>
+            <h4>4 September 2023</h4>
+          </div>
+
+          <div class="col-5">
+            <div class="weather">
+              <template id="weatherApi">
+                <div class="col-4">
+                  <p id="temp"><strong>31</strong></p>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+          
         </div>
       </div>
     </div>
@@ -226,7 +246,7 @@
 
       <!-- Accordion -->
         <div class="col">
-          <div class="accordion" id="accordionExample">
+          <div class="accordion" id="accordion">
 
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -234,7 +254,7 @@
                   Are children of all ages welcome aboard Barbie Dream Boat Cruises?
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
                 <div class="accordion-body">
                   <p>Yes, children of all ages are welcome aboard Barbie Dream Boat Cruises! Join us for a family-friendly adventure filled with fun and enchantment.</p>
                 </div>
@@ -247,7 +267,7 @@
                   Which stunning destinations can we explore during the cruise?
                 </button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
                 <div class="accordion-body">
                   <p>During the cruise with Barbie Dream Boat Cruises, you'll have the opportunity to explore a variety of stunning destinations. Some of our popular cruise itineraries include visits to exotic tropical islands, vibrant coastal cities, and breathtaking natural wonders.</p>
                 </div>
@@ -259,7 +279,7 @@
                   What makes Barbie Dream Boat Cruises a unique and memorable experience?
                 </button>
               </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
                 <div class="accordion-body">
                   <p>Barbie Dream Boat Cruises offers a unique and memorable experience through its enchanting blend of adventure, glamour, and imagination. Our cruise is designed to transport guests into Barbie's world, with themed parties, fashion shows, and activities that capture the spirit of Barbie's iconic universe. </p>
                 </div>
@@ -285,7 +305,7 @@
 
 
      <!-- Tagline -->
-     <div class="container">
+    <div class="container">
       <div class="row">
         <div class="tagline1">
           <h2>Unleash Your Inner Barbie on a Cruise of a Lifetime!</h2>
@@ -293,7 +313,7 @@
         </div>
       </div>
     </div>
-    
+
 
   </body>
 
@@ -312,11 +332,13 @@
         </div>
         <div class="col-2 contactUs">
           <p>Contact Us</p>
-          <img src="assets/phone_icon.svg" alt="call" height="20">
-          <img src="assets/email_icon.svg" alt="mail" height="20">
+          <a href="https://github.com/nicolaprinsloo"><img src="assets/phone_icon.svg" alt="call" height="20"></a>
+          <a href="https://github.com/nicolaprinsloo"><img src="assets/email_icon.svg" alt="mail" height="20"></a>
         </div>
         <div class="col-4 footerLogo">
-          <img src="assets/BarbieCruisesLogo.svg" alt="Logo" height="80">
+          <a href="https://github.com/nicolaprinsloo">
+            <img src="assets/BarbieCruisesLogo.svg" alt="Logo" height="80">
+          </a>
         </div>
         <div class="col-4 contactUs"></div>
 
