@@ -13,7 +13,7 @@ const arrTrips = [
       price: "R3999,00",
       tripLength: "long",
       destination: "multi",
-      special: "available",
+      special: "true",
     },
     { image: "card _image2.jpg",
       name: "Caribbean Dream Cruise",
@@ -24,7 +24,7 @@ const arrTrips = [
       tc: "(additional costs included)",
       price: "R2999,00",
       tripLength: "short",
-      destination: "roundTrip",
+      destination: "roundTrips",
     },
     { image: "card _image3.jpg",
       name: "European Elegance Cruise",
@@ -46,8 +46,8 @@ const arrTrips = [
       tc: "(additional costs included)",
       price: "R999,00",
       tripLength: "short",
-      destination: "roundTrip",
-      special: "available",
+      destination: "roundTrips",
+      special: "true",
     },
     { image: "card _image5.jpg",
       name: "Bali Bliss Cruise",
@@ -58,8 +58,8 @@ const arrTrips = [
       tc: "(additional costs included)",
       price: "R999,00",
       tripLength: "short",
-      destination: "roundTrip",
-      special: "available",
+      destination: "roundTrips",
+      special: "true",
     },
     { image: "card _image6.jpg",
       name: "Hawaiian Hideaway Cruise",
@@ -92,7 +92,7 @@ const arrTrips = [
       tc: "(additional costs included)",
       price: "R1999,00",
       tripLength: "short",
-      destination: "roundTrip",
+      destination: "roundTrips",
     },
     { image: "card _image9.jpg",
       name: "Barbie's Nordic Fantasy",
@@ -104,7 +104,7 @@ const arrTrips = [
       price: "R2999,00",
       tripLength: "long",
       destination: "single",
-      special: "available",
+      special: "true",
     },
     { image: "card _image10.jpg",
       name: "Barbie's Pacific Island Paradise",
@@ -126,7 +126,7 @@ const arrTrips = [
       tc: "(additional costs included)",
       price: "R2999,00",
       tripLength: "short",
-      destination: "roundTrip",
+      destination: "roundTrips",
     },
     { image: "card _image12.jpg",
       name: "Barbie's Coastal Charm Cruise",
@@ -137,8 +137,8 @@ const arrTrips = [
       tc: "(additional costs included)",
       price: "R999,00",
       tripLength: "short",
-      destination: "roundTrip",
-      special: "available",
+      destination: "roundTrips",
+      special: "true",
     },
 ];
 
@@ -215,6 +215,8 @@ function loadTrips(arrTrips) {
 
   console.log(arrTrips);
 
+  $("#tripsContainer").empty();
+
   // Loop through Trips
   for (let i = 0; i < arrTrips.length; i++) {
   const trips = arrTrips[i];
@@ -259,29 +261,76 @@ function loadTrips(arrTrips) {
 // When a filter is clicked
 // ----------------------------------------------------------------
 
+// $("input[name='filterCheck']").click(function() {
+//   appliedFilter = $(this).attr('value');
+
+//   console.log(appliedFilter);
+//   filterTrips();
+
+// });
+
+
+// function filterTrips() {
+
+//   let filteredArrTrips = [];
+
+//   //Filter Trips
+//   if (appliedFilter) {
+//     filteredArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
+//   } else {
+//     filteredArrTrips = arrTrips;
+//   }
+
+//   loadTrips(filteredArrTrips);
+
+// };
+
 $("input[name='filterCheck']").click(function() {
-  appliedFilter = $(this).attr('value');
+
+  appliedFilter = $(this).attr('value')
 
   console.log(appliedFilter);
   filterTrips();
-
 });
 
+$("input[name='filter2']").click(function() {
 
-function filterTrips() {
+  filterApplied = $(this).attr('value')
 
-  let filteredArrTrips = [];
+  console.log(filterApplied);
+  tripsFilter();
+});
 
-  //Filter Trips
-  if (appliedFilter) {
-    filteredArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
-  } else {
-    filteredArrTrips = arrTrips;
-  }
+  function filterTrips() {
 
-  loadTrips(filteredArrTrips);
+      let filteredArrTrips = [];
 
-};
+      // Filter 1
+     
+      if (appliedFilter) {
+          if (appliedFilter === "special") {
+            filteredArrTrips = arrTrips.filter(trip => trip.special == "true");
+          } else {
+            filteredArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
+          }
+        } else {
+          filteredArrTrips = arrTrips;
+        }
+
+        loadTrips(filteredArrTrips);
+      
+       };
+
+      //  Filter 2
+  function tripsFilter() {
+
+      let filteredArrTrips2 = [];
+      if(filterApplied) {
+        filteredArrTrips2 = arrTrips.filter(trip => trip.destination == filterApplied)
+      }
+
+      loadTrips(filteredArrTrips2)
+  };
 
 
 
@@ -308,3 +357,73 @@ $("#tripsContainer").on('click', '.card', function() {
     $(this).find("#tripDate").toggle();
 
 });
+
+
+
+// ----------------------------------------------------------------
+// Remove tickets from table
+// ----------------------------------------------------------------
+
+// HRemove ticket from card
+$(document).ready(function() {
+
+  // Handle click event on the remove icons
+  $(".remove").on("click", function() {
+
+    // Find the closest parent <tr> element and remove it
+    $(this).closest("tr").remove();
+
+  });
+});
+
+
+  // Clear the whole table
+  function removeAll() {
+
+  // Get the table element by its id
+  var table = document.getElementById("tableContent");
+
+  // Remove all the <tbody> elements within the table
+  var tbodyElements = table.getElementsByTagName("tbody");
+  for (var i = tbodyElements.length - 1; i >= 0; i--) {
+    table.removeChild(tbodyElements[i]);
+  };
+};
+
+
+
+
+
+// ----------------------------------------------------------------
+// When the trips card - purchase button is clicked
+// ----------------------------------------------------------------
+
+// Local Storage
+localStorage.setItem('tripName', JSON.stringify(arrTrips));
+
+const newArrTrips = JSON.parse(localStorage.getItem('trips'));
+
+
+checkOut = () => {
+
+  let data = JSON.stringify(subOrder)
+  localStorage.setItem('order', data)
+  window.location.href = "../pages/checkoutpage.html";
+
+}
+
+
+resetReturn = () => {
+  localStorage.removeItem('order');
+  window.location.href = '../index.html'
+}
+
+
+
+// ----------------------------------------------------------------
+// Success Message
+// ----------------------------------------------------------------
+
+function showAlert() {
+  alert("Pink-Tastic! We cannot wait to have your onboard for a magical experience! Your tickets are successfully purchased!");
+};

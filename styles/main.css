@@ -612,13 +612,28 @@ form{
     border-bottom: solid 2px #9747FF;
 }
 
+.removeAll{
+    width: 98%;
+}
+
+.removeTickets{
+    border: none;
+    width: 200px;
+    height: 40px;
+    margin-left:1230px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #F3FFFF;
+    color: #F64396;
+}
+
 .payment-options{
     width: 40%;
     height: 200px;
     background: #B57CFF;
     border-radius: 10px;
     margin-left: 123px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: white;
     padding: 25px;
 }
@@ -633,7 +648,7 @@ form{
     background: #9747FF;
     border-radius: 10px;
     margin-left: 60px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: white;
     padding: 25px;
     
@@ -660,3 +675,4 @@ form{
     background: white;
     color: #B57CFF;
 }
+

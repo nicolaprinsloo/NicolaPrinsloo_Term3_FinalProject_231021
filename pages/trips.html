@@ -68,7 +68,7 @@
 
         <!--Filter Radio Buttons-->
         <div class="btn-group col-auto" role="group" aria-label="Basic checkbox toggle button group">
-          <input type="radio" class="btn-check" name="filterCheck" id="allTripsFilter" value="all" autocomplete="off" checked>
+          <input type="radio" class="btn-check" name="filterCheck" id="allTripsFilter" value="" autocomplete="off" checked>
           <label class="btn btn-outline-warning" for="allTripsFilter"><i class="bi bi-check2-circle"></i>All Destinations</label>
         
           <input type="radio" class="btn-check" name="filterCheck" id="longTripsFilter" value="long" autocomplete="off">
@@ -76,17 +76,19 @@
         
           <input type="radio" class="btn-check" name="filterCheck" id="shortTripsFilter" value="short" autocomplete="off">
           <label class="btn btn-outline-warning" for="shortTripsFilter"><i class="bi bi-check2-circle"></i>Short Duration Trips</label>
+        </div>
 
-          <input type="radio" class="btn-check" name="filterCheck" id="singleDestinationFilter" value="ltd" autocomplete="off">
+        <div class="btn-group col-auto" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="radio" class="btn-check" name="filter2" id="singleDestinationFilter" value="single" autocomplete="off">
           <label class="btn btn-outline-warning" for="singleDestinationFilter"><i class="bi bi-check2-circle"></i>Single Destinations</label>
         
-          <input type="radio" class="btn-check" name="filterCheck" id="multiDestinationsFilter" value="kids" autocomplete="off">
+          <input type="radio" class="btn-check" name="filter2" id="multiDestinationsFilter" value="multi" autocomplete="off">
           <label class="btn btn-outline-warning" for="multiDestinationsFilter"><i class="bi bi-check2-circle"></i>Multi Destinations</label>
 
-          <input type="radio" class="btn-check" name="filterCheck" id="roundTripsFilter" value="adults" autocomplete="off">
+          <input type="radio" class="btn-check" name="filter2" id="roundTripsFilter" value="roundTrips" autocomplete="off">
           <label class="btn btn-outline-warning" for="roundTripsFilter"><i class="bi bi-check2-circle"></i>Round Trips</label>
 
-          <input type="radio" class="btn-check" name="filterCheck" id="specialFilter" value="party" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="specialFilter" value="special" autocomplete="off">
           <label class="btn btn-outline-warning" for="specialFilter"><i class="bi bi-check2-circle"></i>Row Boat Special</label>
 
           <input type="radio" class="btn-check" name="filterCheck" id="moreFilter" value="more" autocomplete="off">
@@ -136,7 +138,7 @@
             <p class="tripDuration" id="tripDuration">From 21 July to 24 July 2024</p>
             <p class="tcInfo" id="tcInfo">additional costs included</p>
             <p class="tripPrice" id="tripPrice">R00,00</p>
-            <button class="button8" id="bookButton">
+            <button class="button8" id="bookButton" onclick="checkOut()">
               <strong><p>BOOK TICKET</p></strong>
             </button>
           </div>

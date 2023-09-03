@@ -66,7 +66,7 @@
 
 
       <!-- Tickets Added -->
-      <table class="table">
+      <table class="table" id="tableContent">
         <thead class="table-danger">
           <tr>
             <th scope="col">Cruise</th>
@@ -77,20 +77,63 @@
             <th scope="col"></th>
           </tr>
         </thead>
-        <tbody>
+
+        <tbody>   
           <tr>
-            <th scope="row">Malibu</th>
+            <th scope="row">Mystical Mediterranean Cruise</th>
             <td>#12345</td>
-            <td>3 Days</td>
+            <td>6 Days</td>
             <td>x 1</td>
-            <td>R00,00</td>
+            <td>R3999,00</td>
             <td>
-              <img src="../assets/remove_icon.png" alt="Logo" height="30">
+              <img class="remove"  src="../assets/remove_icon.png" alt="Logo" height="30">
             </td>
           </tr>
+        </tbody>
+
+        <tbody>   
+          <tr>
+            <th scope="row">Tropical Paradise Cruise</th>
+            <td>#12375</td>
+            <td>4 Days</td>
+            <td>x 1</td>
+            <td>R1999,00</td>
+            <td>
+              <img class="remove"  src="../assets/remove_icon.png" alt="Logo" height="30">
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>   
+          <tr>
+            <th scope="row">Barbie's Pacific Island Paradise</th>
+            <td>#12395</td>
+            <td>9 Days</td>
+            <td>x 1</td>
+            <td>R7999,00</td>
+            <td>
+              <img class="remove"  src="../assets/remove_icon.png" alt="Logo" height="30">
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>   
+          <tr>
+            <th scope="row">Barbie's Coastal Charm Cruise</th>
+            <td>#12545</td>
+            <td>4 Days</td>
+            <td>x 1</td>
+            <td>R999,00</td>
+            <td>
+              <img class="remove"  src="../assets/remove_icon.png" alt="Logo" height="30">
+            </td>
           </tr>
         </tbody>
       </table>
+
+
+      <!-- Remove all tickets from table -->
+      <div class="removeTickets" onclick="removeAll()"><p><strong>Remove All Trip Items</strong></p></div>
     
 
       <!--Payment Options-->
@@ -137,10 +180,12 @@
             <!-- <p>X 7 Tickets</p> -->
           </div>
           <div class="price">
-            <h2>R00,00</h2>
+            <h2>R14 996,00</h2>
           </div>
           <button class="button9">
-            <strong><h4>PURCHASE TICKETS</h4></strong>
+            <div class="purchaseButton" onclick="showAlert(), resetReturn()">
+             <strong><h4>PURCHASE TICKETS</h4></strong>
+            </div> 
         </button>
 
         </div>
