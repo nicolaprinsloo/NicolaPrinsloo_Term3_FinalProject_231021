@@ -38,7 +38,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repo
 ```sh
-git clone https://github.com/paulowi/DV100-T3-Class-Project-Test
+https://github.com/nicolaprinsloo/NicolaPrinsloo_Term3_FinalProject_231021.git
 ```
 2. Open the project
 
@@ -64,6 +64,7 @@ Contributions are what make the open source community such an amazing place to b
 ## Authors
 
 * **Nicola Prinsloo** - *Javascript, HTML & Open Weather API* - [NicolaPrinsloo](https://github.com/nicolaprinsloo)
+* **Kayla Posthumus** - *Javascript, HTML & Open Weather API* - [KaylaPPosthumus](https://github.com/KaylaPosthumusOW)
 
 See also the list of [contributors](https://github.com/nicolaprinsloo/NicolaPrinsloo_Term3_FinalProject_231021/graphs/contributors) who participated in this project.
 
