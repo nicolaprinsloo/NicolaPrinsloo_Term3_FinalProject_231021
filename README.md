@@ -4,6 +4,7 @@
 This is my term 3 project in Interactive Development as a First Year student, where I learn more advanced javascript and jQuery. This project aims to create a modern, user-friendly website for an online booking system catering to a Cruise Liner company - Barbie Dream Boat Cruises. This system will empower users to effortlessly book cruise trips and access detailed journey information via an intuitive web form. I will employ JavaScript, jQuery, HTML, and CSS to build this interactive platform, ensuring a seamless user experience. Moreover, version control will be managed with Git, and an API integration will enhance user engagement.
 
 [Watch the demo Part1 »](<div style="position: relative; padding-bottom: 64.86486486486486%; height: 0;"><iframe src="https://www.loom.com/embed/881dab4581154209a61cddc728f44a18?sid=42e3c832-9f77-4b90-93f3-d0e3c57627fe" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>)
+
 [Watch the demo Part 2 »](<div style="position: relative; padding-bottom: 64.86486486486486%; height: 0;"><iframe src="https://www.loom.com/embed/f3a798596d294d82b8cb49e4d70b8d1f?sid=96bc02b6-7fbd-48f2-821b-75a6c95b5545" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>)
 
 ## Table of Contents
