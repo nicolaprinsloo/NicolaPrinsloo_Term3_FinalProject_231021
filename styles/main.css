@@ -451,7 +451,7 @@ form{
     color: #F64396;
     text-align: center;
     margin-top: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
 }
 
 .trips{
@@ -482,7 +482,7 @@ form{
     width: 300px;
     border: none;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .description{
@@ -490,8 +490,11 @@ form{
 }
 
 .card-img-top{
+    height: 180px;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
+    background-position: center;
+    background-size: cover;
 }
 
 /* .card-img-top.small{

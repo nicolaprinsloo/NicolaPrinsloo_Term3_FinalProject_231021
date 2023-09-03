@@ -9,7 +9,7 @@ This is my term 3 project in Interactive Development as a First Year student, wh
 
 * [About the Project](#about-the-project)
    * [Home](#home)
-   * [Browse Cruise Trips](#browse-plants)
+   * [Browse Cruise Trips](#browse-trips)
 * [Getting Started](#getting-started)
   * [Installing](#installing)
 * [Built With](#built-with)
@@ -21,13 +21,13 @@ This is my term 3 project in Interactive Development as a First Year student, wh
 
 ## About The Project
 
-Barbie Cruises allows users to browse and filter different cruise trips to find a pink-tastic getaway. At Barbie Dream Boat Cruises, we are dedicated to infusing every moment with enchantment, adventure, and indelible memories. Our commitment to a captivating design, robust functionality, and user-friendly features ensures a smooth booking experience.
+Barbie Cruises allows users to browse and filter through different cruise trips to find a pink-tastic getaway. At Barbie Dream Boat Cruises, we are dedicated to infusing every moment with enchantment, adventure, and indelible memories. Our commitment to a captivating design, robust functionality, and user-friendly features ensures a smooth booking experience.
 
 ### Home
 
 ![BarbieCruisesHomePage](/assets/ReadMe%20Home%20Page%20Mockup.png)
 
-### Browse Plants
+### Browse Trips
 
 ![BarbieCruisesTripsPage](/assets/Trips%20Page%20Mockup.png)
 
@@ -64,8 +64,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Authors
 
-* **Nicola Prinsloo** - *Javascript, HTML & Open Weather API* - [NicolaPrinsloo](https://github.com/nicolaprinsloo)
-* **Kayla Posthumus** - *Javascript, HTML & Open Weather API* - [KaylaPPosthumus](https://github.com/KaylaPosthumusOW)
+* **Nicola Prinsloo** - *Javascript, HTML, CSS & Open Weather API* - [NicolaPrinsloo](https://github.com/nicolaprinsloo)
 
 See also the list of [contributors](https://github.com/nicolaprinsloo/NicolaPrinsloo_Term3_FinalProject_231021/graphs/contributors) who participated in this project.
 
@@ -75,11 +74,13 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgements
 
-* [PaulLoots](https://github.com/PaulLoots)
-* [CarloOpenWindow](https://github.com/CarloOpenWindow)
-* [Term 3 DV100 test File](https://github.com/paulowi/DV100-T3-Class-Project-Test/graphs/contributors)
+* Thank you [PaulLoots](https://github.com/PaulLoots) and Tsungai Katsuro for educating me in this term's theory on more advanced javascript and jQuery.
+* Thank you [CarloOpenWindow](https://github.com/CarloOpenWindow) for assistance throughout the term.
+* Big thanks to [Term 3 DV100 test File](https://github.com/paulowi/DV100-T3-Class-Project-Test/graphs/contributors) being a guide to helping me create my own project.
 * [Pinterest Inspiration](https://github.com/paulowi/DV100-T3-Class-Project-Test/graphs/contributors)
-* Text Content via Chat GPT
+* Thanks to Chat GPT for providing text and content for my project.
+* A big thanks to [KaylaPosthumus](https://github.com/KaylaPosthumusOW) for always assisting me with my broken code and moral motivation.
+* Thank you Wynand De Beer for debugging some code errors.
 
  ## Plagiarism Declaration
 
