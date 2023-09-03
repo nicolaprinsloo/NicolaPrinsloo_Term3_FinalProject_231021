@@ -44,6 +44,11 @@ h4,h5,h6,p {
     background: #F3FFFF;
     color: #52CBCC;
 }
+.button1:hover{
+    cursor: pointer;
+    background: #8aeaea;
+    color: #F3FFFF;
+}
 
 
 
@@ -54,6 +59,7 @@ h4,h5,h6,p {
 
 /* Navigation */
 .navbar{
+    position: fixed;
     background-color: #52CBCC;
 }
 
@@ -83,7 +89,7 @@ h4,h5,h6,p {
 
 /* Footer */
 footer{
-    width: 1128px;
+    width: 100%;
     margin-top: 100px;
     padding-top: 20px;
     background-color: #52CBCC;
@@ -190,6 +196,11 @@ header{
     color: #F1A03C;
     margin-left: 700px;
 }
+.button2:hover{
+    cursor: pointer;
+    background: #F1A03C;
+    color: #F3FFFF;
+}
 
 /* Slide 2 */
 .slide2{}
@@ -244,6 +255,11 @@ header{
     color: #F1A03C;
     margin-left: 700px;
 }
+.button3:hover{
+    cursor: pointer;
+    background: #F1A03C;
+    color: #F3FFFF;
+}
 
 /* Slide 3 */
 .slide3{}
@@ -290,6 +306,11 @@ header{
     background: #F3FFFF;
     color: #F1A03C;
     margin-left: 700px;
+}
+.button4:hover{
+    cursor: pointer;
+    background: #F1A03C;
+    color: #F3FFFF;
 }
 
 
@@ -391,8 +412,8 @@ form{
     
 }
 
-/* ---------------------------------------- */
-/* Extra */
+
+
 
 /* ---------------------------------------------------------------------------------------------------------------- */
 /* TRIPS PAGE*/
@@ -432,6 +453,7 @@ form{
     width: 300px;
     border: none;
     color: white;
+    margin-bottom: 20px;
 }
 
 .description{
@@ -480,7 +502,11 @@ form{
     background: #F3FFFF;
     color: #F1A03C;
     margin-bottom: 5px;
-    
+}
+.button5:hover{
+    cursor: pointer;
+    background: #F1A03C;
+    color: #F3FFFF;
 }
 
 .button6{
@@ -491,4 +517,114 @@ form{
     background: #F3FFFF;
     color: #F1A03C;
     margin-bottom: 5px;;
+}
+.button6:hover{
+    cursor: pointer;
+    background: #F1A03C;
+    color: #F3FFFF;
+}
+
+.button7{
+    border: none;
+    height: 30px;
+    width: 150px;
+    padding-top: 5px;
+    border-radius: 10px;
+    background: #F3FFFF;
+    color: #F1A03C;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.button7:hover{
+    cursor: pointer;
+    background: #F64396;
+    color: #F3FFFF;
+}
+
+.button8{
+    border: none;
+    height: 30px;
+    width: 150px;
+    padding-top: 5px;
+    border-radius: 10px;
+    background: #F3FFFF;
+    color: #F1A03C;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.button8:hover{
+    cursor: pointer;
+    background: #9747FF;
+    color: #F3FFFF;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* TICKETS PAGE*/
+
+.tickets{
+    color: #9747FF;
+    font-style: italic;
+    margin-top: 5%;
+    margin-left: 115px;
+}
+
+.table{
+    width: 85%;
+    margin: 0 auto;
+    border: solid 2px #9747FF;
+}
+
+.table-danger{
+    border-bottom: solid 2px #9747FF;
+}
+
+.payment-options{
+    width: 40%;
+    height: 200px;
+    background: #B57CFF;
+    border-radius: 10px;
+    margin-left: 123px;
+    margin-top: 20px;
+    color: white;
+    padding: 25px;
+}
+
+.payment-check{
+    margin-top: 5px;;
+}
+
+.costTotal{
+    width: 40%;
+    height: 200px;
+    background: #9747FF;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: white;
+    padding: 25px;
+    
+}
+
+.price{
+    float: right;
+    margin-top: -50px;
+}
+
+.button9{
+    border: none;
+    width: 250px;
+    height: 50px;
+    margin-left: 320px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background: #B57CFF;
+    color: white;
+    margin-top: 50px;
+}
+.button9:hover{
+    cursor: pointer;
+    background: white;
+    color: #B57CFF;
 }

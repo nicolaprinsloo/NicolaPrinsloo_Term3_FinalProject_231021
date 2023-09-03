@@ -12,6 +12,7 @@ const arrTrips = [
       duration: "From ... To ...",
       tc: "additional costs included",
       price: "R2999,00",
+      tripLength: "long",
     },
     { image: "card img.jpg",
       name: "Malibu Coastline Cruise",
@@ -22,6 +23,7 @@ const arrTrips = [
       duration: "From ... To ...",
       tc: "additional costs included",
       price: "R2999,00",
+      tripLength: "long",
     },
     { image: "card img.jpg",
       name: "Malibu Coastline Cruise",
@@ -32,52 +34,115 @@ const arrTrips = [
       duration: "From ... To ...",
       tc: "additional costs included",
       price: "R2999,00",
+      tripLength: "long",
+    },
+    { image: "card img.jpg",
+      name: "Malibu Coastline Cruise",
+      description: "Cruise along the Malibu coastline, soak up the sun, and enjoy breathtaking ocean views on this unforgettable nautical adventure.",
+      date: "21 July 2024",
+      code: "#12345",
+      destination: "Round Trip",
+      duration: "From ... To ...",
+      tc: "additional costs included",
+      price: "R2999,00",
+      tripLength: "long",
+    },
+    { image: "card img.jpg",
+      name: "Malibu Coastline Cruise",
+      description: "Cruise along the Malibu coastline, soak up the sun, and enjoy breathtaking ocean views on this unforgettable nautical adventure.",
+      date: "21 July 2024",
+      code: "#12345",
+      destination: "Round Trip",
+      duration: "From ... To ...",
+      tc: "additional costs included",
+      price: "R2999,00",
+      tripLength: "long",
     },
 ];
 
 let appliedFilter = "";
 
 
+
+// ------------------------------------------------------------------------
+// When the document loads
+// ------------------------------------------------------------------------
+
 console.log(arrTrips);
 
 $(document).ready(function(){
 
+  console.log("Hello, I am working");
+
   console.log(arrTrips)
   loadTrips(arrTrips)
 
-  console.log("Hello, I am working");
-
-  // -----------------------------------------
-  // Trips Page
-
-  // loadTrips(arrTrips);
+  filterSortTrips();
 
 }); 
+
+
+
+// ----------------------------------------------------------------
+// When a filter or sort is clicked
+// ----------------------------------------------------------------
+
+$("input[name='filterRadio']").click(function() {
+  appliedFilter = $(this).attr('value');
+
+  filterSortTrips();
+
+});
+
+
+function filterSortTrips() {
+
+  let filteredArrTrips = [];
+
+  console.log(appliedFilter);
+
+  //Filter Trips
+  if (appliedFilter) {
+    filteredArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
+  } else {
+    filteredArrTrips = arrTrips;
+  }
+  
+  console.log(filteredArrTrips)
+
+  loadTrips(filteredArrTrips);
+
+};
+
+
+
+
 
 // ----------------------------------------------------------------
 // Load all Trips
 // ----------------------------------------------------------------
 
-function loadTrips() {
+function loadTrips(arrTrips) {
 
   // Load and display all the trips
 
   console.log(arrTrips);
 
-  // Clear all elements in container
-  // $("#tripsContainer").empty();
-
   // Loop through Trips
-
   for (let i = 0; i < arrTrips.length; i++) {
   const trips = arrTrips[i];
 
-  console.log(trips);
+  console.log(trips.name);
 
+  // 1: Select the trips container add the trip card to it
   $("#tripsContainer").append($("#tripsCardTemplate").html());
 
+  // 2: Create a variable that contains the most recently added trip card
   let currentChild = $("#tripsContainer").children().eq(i+1);
 
+  //Connect subject with ids
+
+  // 3: Set the content for the current trip card from the trips array
   //Show
   $(currentChild).find(".card-img-top").attr('src', '../assets/' + trips.image);
   $(currentChild).find("#tripName").text(trips.name);
@@ -89,88 +154,68 @@ function loadTrips() {
   $(currentChild).find("#tcInfo").text(trips.tc); 
   $(currentChild).find("#tripPrice").text(trips.price); 
 
-  // //Hide
+  // 4: Hide the description text from the current card
+  //Hide
   $(currentChild).find("#tripCode").hide(); 
   $(currentChild).find("#tripDestination").hide(); 
   $(currentChild).find("#tripDuration").hide();  
   $(currentChild).find("#tcInfo").hide(); 
   $(currentChild).find("#tripPrice").hide(); 
+  $(currentChild).find("#bookButton").hide(); 
   }
   
 };
+
 
 // ----------------------------------------------------------------
 // When the trips card is clicked
 // ----------------------------------------------------------------
 
-$("#tripsContainer").on('click', '.card', function(){
+$("#tripsContainer").on('click', '.card', function() {
 
-    // Show
+    // Toggle what to Show
     $(this).find("#tripCode").toggle(); 
     $(this).find("#tripDestination").toggle(); 
     $(this).find("#tripDuration").toggle();  
     $(this).find("#tcInfo").toggle(); 
-    $(this).find("#tripPrice").toggle(); 
+    $(this).find("#tripPrice").toggle();
+    $(this).find("#bookButton").toggle();
 
-    // hide
+    // Toggle what to Hide
     $(this).find("#tripsImage").toggle(); 
     $(this).find("#tripName").toggle(); 
     $(this).find("#tripDescription").toggle(); 
-    $(this).find("#tripDate").toggle(); 
+    $(this).find("#moreButton").toggle();
+    $(this).find("#tripDate").toggle();
 
 });
-    
-    // console.log(trip);
 
-    // // 1: Select trips container and add the current array trips to it
-    // $("#tripsContainer").append($("#tripCardTemplate").html());
 
-    // // 2: Create a variable that contains the most recently added trip card
-    // let currentChild = $("#tripsContainer").children().eq(i);
 
-    // // 3: Set the content for the trip card from the trip list
-    // $(currentChild).find(".card-img-top").attr('src','assets/Logo.svg' + trip.image);
-    // $(currentChild).find("#nameText").text(trip.name);
-    // $(currentChild).find("#priceText").text('R' + trip.price);
-    // $(currentChild).find("#descriptionText").text(trip.description);
 
-    // // 4: Hide the description text from the trip card
-    // $(currentChild).find("#descriptionText").hide();
-    // $(currentChild).find("#weatherTemp").hide();
 
-//   }
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ----------------------------------------------------------------
-// When a filter or sort is clicked
+// extras
 // ----------------------------------------------------------------
 
-$("input[name='filterRadio']").click(function() {
-  appliedFilter = $(this).attr('value');
 
-  console.log(appliedFilter);
-  filterSortTrips();
-});
-
-$("input[name='sortRadio']").click(function() {
-  appliedSort = $(this).attr('value');
-
-  console.log(appliedSort);
-  filterSortTrips();
-});
-
-function filterSortTrips() {
-
-  let filteredSortedArrTrips = [];
-
-  //Filter trips
-  filteredSortedArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
-  
-  loadTrips(filteredSortedArrTrips);
-
-  
-
-}
 
 // ----------------------------------------------------------------
 // When the trips card is clicked
@@ -201,3 +246,25 @@ function filterSortTrips() {
 //     ("#weatherTemp").text(data.main.temp);
 //   });
 // })
+
+    
+    // console.log(trip);
+
+    // // 1: Select trips container and add the current array trips to it
+    // $("#tripsContainer").append($("#tripCardTemplate").html());
+
+    // // 2: Create a variable that contains the most recently added trip card
+    // let currentChild = $("#tripsContainer").children().eq(i);
+
+    // // 3: Set the content for the trip card from the trip list
+    // $(currentChild).find(".card-img-top").attr('src','assets/Logo.svg' + trip.image);
+    // $(currentChild).find("#nameText").text(trip.name);
+    // $(currentChild).find("#priceText").text('R' + trip.price);
+    // $(currentChild).find("#descriptionText").text(trip.description);
+
+    // // 4: Hide the description text from the trip card
+    // $(currentChild).find("#descriptionText").hide();
+    // $(currentChild).find("#weatherTemp").hide();
+
+//   }
+// }
