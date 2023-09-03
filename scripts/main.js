@@ -23,7 +23,7 @@ const arrTrips = [
       duration: "From ... To ...",
       tc: "additional costs included",
       price: "R2999,00",
-      tripLength: "long",
+      tripLength: "short",
     },
     { image: "card img.jpg",
       name: "Malibu Coastline Cruise",
@@ -35,6 +35,39 @@ const arrTrips = [
       tc: "additional costs included",
       price: "R2999,00",
       tripLength: "long",
+    },
+    { image: "card img.jpg",
+      name: "Malibu Coastline Cruise",
+      description: "Cruise along the Malibu coastline, soak up the sun, and enjoy breathtaking ocean views on this unforgettable nautical adventure.",
+      date: "21 July 2024",
+      code: "#12345",
+      destination: "Round Trip",
+      duration: "From ... To ...",
+      tc: "additional costs included",
+      price: "R2999,00",
+      tripLength: "short",
+    },
+    { image: "card img.jpg",
+      name: "Malibu Coastline Cruise",
+      description: "Cruise along the Malibu coastline, soak up the sun, and enjoy breathtaking ocean views on this unforgettable nautical adventure.",
+      date: "21 July 2024",
+      code: "#12345",
+      destination: "Round Trip",
+      duration: "From ... To ...",
+      tc: "additional costs included",
+      price: "R2999,00",
+      tripLength: "long",
+    },
+    { image: "card img.jpg",
+      name: "Malibu Coastline Cruise",
+      description: "Cruise along the Malibu coastline, soak up the sun, and enjoy breathtaking ocean views on this unforgettable nautical adventure.",
+      date: "21 July 2024",
+      code: "#12345",
+      destination: "Round Trip",
+      duration: "From ... To ...",
+      tc: "additional costs included",
+      price: "R2999,00",
+      tripLength: "short",
     },
     { image: "card img.jpg",
       name: "Malibu Coastline Cruise",
@@ -77,9 +110,11 @@ $(document).ready(function(){
   console.log(arrTrips)
   loadTrips(arrTrips)
 
-  filterSortTrips();
+  filterTrips();
 
 }); 
+
+
 
 // ----------------------------------------------------------------
 // Weather API
@@ -112,38 +147,6 @@ function updateTemperature(temp) {
 }
 
 
-// ----------------------------------------------------------------
-// When a filter or sort is clicked
-// ----------------------------------------------------------------
-
-$("input[name='filterRadio']").click(function() {
-  appliedFilter = $(this).attr('value');
-
-  filterSortTrips();
-
-});
-
-
-function filterSortTrips() {
-
-  let filteredArrTrips = [];
-
-  console.log(appliedFilter);
-
-  //Filter Trips
-  if (appliedFilter) {
-    filteredArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
-  } else {
-    filteredArrTrips = arrTrips;
-  }
-  
-  console.log(filteredArrTrips)
-
-  loadTrips(filteredArrTrips);
-
-};
-
-
 
 
 
@@ -167,7 +170,7 @@ function loadTrips(arrTrips) {
   $("#tripsContainer").append($("#tripsCardTemplate").html());
 
   // 2: Create a variable that contains the most recently added trip card
-  let currentChild = $("#tripsContainer").children().eq(i+1);
+  let currentChild = $("#tripsContainer").children().eq(i);
 
   //Connect subject with ids
 
@@ -196,6 +199,38 @@ function loadTrips(arrTrips) {
 };
 
 
+
+// ----------------------------------------------------------------
+// When a filter is clicked
+// ----------------------------------------------------------------
+
+$("input[name='filterCheck']").click(function() {
+  appliedFilter = $(this).attr('value');
+
+  console.log(appliedFilter);
+  filterTrips();
+
+});
+
+
+function filterTrips() {
+
+  let filteredArrTrips = [];
+
+  //Filter Trips
+  if (appliedFilter) {
+    filteredArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
+  } else {
+    filteredArrTrips = arrTrips;
+  }
+
+  loadTrips(filteredArrTrips);
+
+};
+
+
+
+
 // ----------------------------------------------------------------
 // When the trips card is clicked
 // ----------------------------------------------------------------
@@ -218,82 +253,3 @@ $("#tripsContainer").on('click', '.card', function() {
     $(this).find("#tripDate").toggle();
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ----------------------------------------------------------------
-// extras
-// ----------------------------------------------------------------
-
-
-
-// ----------------------------------------------------------------
-// When the trips card is clicked
-// ----------------------------------------------------------------
-
-// $("#tripsContainer").on('click', '.card', function(){
-
-//   // Toggle the price & description text
-//   $(this).find("#priceText").toggle();
-//   $(this).find("#descriptionText").toggle();
-//   $(this).find("#weatherTemp").toggle();
-
-//   // Resize the image to fit the additional content
-//   $(this).find(".card-img-top").toggleClass("small");
-
-// });
-
-//Weather API 
-
-// $(document).ready(function() {
-//   $.ajax({
-//     type:"GET",
-//     URL:"https://api.openweathermap.org/data/2.5/weather?q=Pretoria&appid=6afff1b645e0f71655c4713f2f1c870c",
-//     success:function(data){
-//       console.log(data);
-//     }
-//   }).done.(function(){
-//     ("#weatherTemp").text(data.main.temp);
-//   });
-// })
-
-    
-    // console.log(trip);
-
-    // // 1: Select trips container and add the current array trips to it
-    // $("#tripsContainer").append($("#tripCardTemplate").html());
-
-    // // 2: Create a variable that contains the most recently added trip card
-    // let currentChild = $("#tripsContainer").children().eq(i);
-
-    // // 3: Set the content for the trip card from the trip list
-    // $(currentChild).find(".card-img-top").attr('src','assets/Logo.svg' + trip.image);
-    // $(currentChild).find("#nameText").text(trip.name);
-    // $(currentChild).find("#priceText").text('R' + trip.price);
-    // $(currentChild).find("#descriptionText").text(trip.description);
-
-    // // 4: Hide the description text from the trip card
-    // $(currentChild).find("#descriptionText").hide();
-    // $(currentChild).find("#weatherTemp").hide();
-
-//   }
-// }

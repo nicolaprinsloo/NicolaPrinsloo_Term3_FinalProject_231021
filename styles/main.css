@@ -458,19 +458,20 @@ form{
     color: #F1A03C;
     font-style: italic;
     margin-top: 5%;
-    margin-left: 115px;
+    margin-left: 57px;
 }
 
 .filterGroup{
-    margin-left: 115px;
+    margin-left: 40px;
     margin-top: 2%;
-    margin-bottom: 1%;
+    margin-bottom: 50px;
 }
 
 /* Card */
-.row-trips{
+.tripCard{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-left: 40px;
 }
 
 .card{

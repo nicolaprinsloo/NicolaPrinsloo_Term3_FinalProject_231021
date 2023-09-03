@@ -68,28 +68,28 @@
 
         <!--Filter Radio Buttons-->
         <div class="btn-group col-auto" role="group" aria-label="Basic checkbox toggle button group">
-          <input type="checkbox" class="btn-check" name="filterCheck" id="allTripsFilter" value="all" autocomplete="off" checked>
+          <input type="radio" class="btn-check" name="filterCheck" id="allTripsFilter" value="all" autocomplete="off" checked>
           <label class="btn btn-outline-warning" for="allTripsFilter"><i class="bi bi-check2-circle"></i>All Destinations</label>
         
-          <input type="checkbox" class="btn-check" name="filterCheck" id="longTripsFilter" value="long" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="longTripsFilter" value="long" autocomplete="off">
           <label class="btn btn-outline-warning" for="longTripsFilter"><i class="bi bi-check2-circle"></i>Long Duration Trips</label>
         
-          <input type="checkbox" class="btn-check" name="filterCheck" id="shortTripsFilter" value="short" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="shortTripsFilter" value="short" autocomplete="off">
           <label class="btn btn-outline-warning" for="shortTripsFilter"><i class="bi bi-check2-circle"></i>Short Duration Trips</label>
 
-          <input type="checkbox" class="btn-check" name="filterCheck" id="singleDestinationFilter" value="ltd" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="singleDestinationFilter" value="ltd" autocomplete="off">
           <label class="btn btn-outline-warning" for="singleDestinationFilter"><i class="bi bi-check2-circle"></i>Single Destinations</label>
         
-          <input type="checkbox" class="btn-check" name="filterCheck" id="multiDestinationsFilter" value="kids" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="multiDestinationsFilter" value="kids" autocomplete="off">
           <label class="btn btn-outline-warning" for="multiDestinationsFilter"><i class="bi bi-check2-circle"></i>Multi Destinations</label>
 
-          <input type="checkbox" class="btn-check" name="filterCheck" id="roundTripsFilter" value="adults" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="roundTripsFilter" value="adults" autocomplete="off">
           <label class="btn btn-outline-warning" for="roundTripsFilter"><i class="bi bi-check2-circle"></i>Round Trips</label>
 
-          <input type="checkbox" class="btn-check" name="filterCheck" id="specialFilter" value="party" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="specialFilter" value="party" autocomplete="off">
           <label class="btn btn-outline-warning" for="specialFilter"><i class="bi bi-check2-circle"></i>Row Boat Special</label>
 
-          <input type="checkbox" class="btn-check" name="filterCheck" id="moreFilter" value="more" autocomplete="off">
+          <input type="radio" class="btn-check" name="filterCheck" id="moreFilter" value="more" autocomplete="off">
           <label class="btn btn-outline" for="moreFilter"><i class="bi bi-chevron-compact-down"></i>More</label>
         </div>
 
@@ -108,43 +108,43 @@
     <!-- ------------------------------------------------------------------------------------------------ -->
     <!-- Trip Cards -->
 
-    <!--Trips Cards Append here-->
-
-    <div class="row trips" id="tripsContainer">
-      <template id="tripsCardTemplate">
-
-        <div class="col-3">
-          <div class="card" id="tripCard">
-            <img class="card-img-top" id="tripsImage">
-            <div class="card body">
-
-              <div class="tripName">
-                <p id="tripName">Malibu</p>
-              </div>
-              <div class="description">
-                <p id="tripDescription">Cruise along the Malibu coastline, soak up the sun, and enjoy breathtaking ocean views on this unforgettable nautical adventure.</p>
-              </div>
-              <button class="button7" id="moreButton">
-                <strong><p>MORE INFO</p></strong>
-              </button>
-                
-              </div>
-              <p class="tripDate" id="tripDate">21 July 2024</p>
-              <p class="tripCode" id="tripCode">#12345</p>
-              <p class="tripDestination" id="tripDestination">Malibu West Coast</p>
-              <p class="tripDuration" id="tripDuration">From 21 July to 24 July 2024</p>
-              <p class="tcInfo" id="tcInfo">additional costs included</p>
-              <p class="tripPrice" id="tripPrice">R00,00</p>
-              <button class="button8" id="bookButton">
-                <strong><p>BOOK TICKET</p></strong>
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </template>
+    <div class="row tripCard" id="tripsContainer">
+      
+      <!-- Trip Card Appended -->
     </div>
 
+    <template id="tripsCardTemplate">
+
+      <div class="col-3">
+        <div class="card" id="tripCard">
+          <img class="card-img-top" id="tripsImage">
+          <div class="card body">
+
+            <div class="tripName">
+              <p id="tripName">Malibu</p>
+            </div>
+            <div class="description">
+              <p id="tripDescription">Cruise along the Malibu coastline, soak up the sun, and enjoy breathtaking ocean views on this unforgettable nautical adventure.</p>
+            </div>
+            <button class="button7" id="moreButton">
+              <strong><p>MORE INFO</p></strong>
+            </button>
+              
+            </div>
+            <p class="tripDate" id="tripDate">21 July 2024</p>
+            <p class="tripCode" id="tripCode">#12345</p>
+            <p class="tripDestination" id="tripDestination">Malibu West Coast</p>
+            <p class="tripDuration" id="tripDuration">From 21 July to 24 July 2024</p>
+            <p class="tcInfo" id="tcInfo">additional costs included</p>
+            <p class="tripPrice" id="tripPrice">R00,00</p>
+            <button class="button8" id="bookButton">
+              <strong><p>BOOK TICKET</p></strong>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </template>
 
   </body>
 
