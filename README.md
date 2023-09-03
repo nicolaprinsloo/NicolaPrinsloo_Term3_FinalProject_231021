@@ -29,7 +29,7 @@ Barbie Cruises allows users to browse and filter through different cruise trips 
 
 ### Browse Trips
 
-![BarbieCruisesTripsPage](/assets/Trips%20Page%20Mockup.png)
+![BarbieCruisesTripsPage](/assets/ReadMe%20Trips%20Page%20Mockup.png)
 
 ## Getting Started
 
